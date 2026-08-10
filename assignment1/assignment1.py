@@ -76,8 +76,8 @@ print(len(ai_students))
 # 5.  using list comprehension
 ai_students_comprehension = [student for student in students if student["track"] == "AI"]
 
-print(len(ai_students_comprehension))
-
+print(ai_students_comprehension)
+print(ai_students == ai_students_comprehension)
 
 # 6. Names of students who studied more than 30 hours
 students_over_30 = [student["name"] for student in students if student["hours_studied"] > 30]
@@ -98,7 +98,7 @@ print(older_ai_students)
 total_age = 0
 
 for student in students:
-    total_age = total_age + student["age"]
+    total_age += student["age"]
 
 average_age = total_age / len(students)
 
